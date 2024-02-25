@@ -6,29 +6,40 @@ Large Language Models (LLMs) retrieve knowledge from their own structures and re
 Please see batch for code.
 
 First, make sure you have Python 3.8 installed on your machine
+```
 $ python --version
 Python 3.8
-Next, create a virtual environment and install the project's dependencies within the virtual environment
-# Pull warehouse
-$ https://github.com/cistineup/CantCounter.git
+```
 
+Next, create a virtual environment and install the project's dependencies within the virtual environment
+```
+# Pull warehouse
+$ git clone https://github.com/cistineup/CantCounter.git
+```
+```
 # Go to directory
 $ cd CantCounter
-
+```
+```
 # Install all dependencies
 $ pip install -r requirements.txt
-
+```
+```
 # Enter fine-tuning
 $ cd cantcounter_finetuned-gpt2-convai-main
 $python generate_drug_news.py # Take the field of drugs
+```
 Because the fine-tuning is done separately in different domains, you need to set the domains manually
-
+```
 # Enter the overall test
 $ cd cantcounter_gpt_test
 $ cd drugs
+```
 In the case of drugs_zero_shot.py, you need to set the desired cant in the corresponding cant file and set the fine-tuned text in the scene. Put them in drugs_zero_shot.py at the same time and then run.
 
+```
 # Run test
 $ python drugs_zero_shot.py
+```
 
 The final test results will be summarized and sorted in the test data.
